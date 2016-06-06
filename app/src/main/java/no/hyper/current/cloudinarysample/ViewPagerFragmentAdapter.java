@@ -26,10 +26,12 @@ class ViewPagerFragmentAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         Log.v(getClass().getSimpleName(), "childCount = " + childCount);
 
-        if (position < getCount() - 1) {
-            return MainFragment.getInstance(position);
-        } else {
+        if (position == getCount() - 1) {// The last one
             return ViewPagerFragment.getInstance();
+        } else if (position == getCount() - 2) { // the last one - 1
+            return HorizontalScrollFragment.getInstance();
+        } else {
+            return MainFragment.getInstance(position);
         }
     }
 
