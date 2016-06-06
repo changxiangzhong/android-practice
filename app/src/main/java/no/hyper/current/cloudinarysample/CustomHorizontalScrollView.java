@@ -5,6 +5,7 @@ import android.support.v4.view.GestureDetectorCompat;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
+import android.view.View;
 import android.widget.HorizontalScrollView;
 
 /**
@@ -42,8 +43,26 @@ public class CustomHorizontalScrollView extends HorizontalScrollView {
     }
 
     public boolean canScroll(int dx) {
-        Log.v(getClass().getSimpleName(), "canScroll(), dx = " + dx);
-        return true;
+        boolean ret;
+        int range = computeHorizontalScrollRange();
+        int offset = computeHorizontalScrollOffset();
+        int extent = computeHorizontalScrollExtent();
+
+        boolean rightEndReached = range == offset + extent;
+        boolean leftEndReached = offset == 0;
+
+        if (dx < 0 && rightEndReached) {
+            ret = false;
+        } else  if (dx > 0 && leftEndReached) {
+            ret = false;
+        } else {
+            ret = true;
+        }
+
+        Log.v(getClass().getSimpleName(), "canScroll(), dx = " + dx + ", rightEndReached = " + rightEndReached +
+                ", leftEndReached = " + leftEndReached + ", canScroll = " + ret);
+
+        return ret;
     }
 
 }

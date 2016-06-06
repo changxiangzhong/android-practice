@@ -40,7 +40,6 @@ public class CustomViewPager extends ViewPager {
 
     @Override
     protected boolean canScroll(View v, boolean checkV, int dx, int x, int y) {
-        Log.v(getClass().getSimpleName(), "canScroll(), view = " + v.getClass().getSimpleName());
         if (v instanceof CustomHorizontalScrollView) {
             CustomHorizontalScrollView hScrollView = (CustomHorizontalScrollView) v;
             return hScrollView.canScroll(dx);
