@@ -1,4 +1,4 @@
-package no.hyper.current.cloudinarysample;
+package no.hyper.current.cloudinarysample.scrollInScroll;
 
 import android.content.Context;
 import android.support.design.widget.TabLayout;

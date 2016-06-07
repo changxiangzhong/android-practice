@@ -1,11 +1,10 @@
-package no.hyper.current.cloudinarysample;
+package no.hyper.current.cloudinarysample.scrollInScroll;
 
 import android.content.Context;
 import android.support.v4.view.GestureDetectorCompat;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
-import android.view.View;
 import android.widget.HorizontalScrollView;
 
 /**

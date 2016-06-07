@@ -1,4 +1,4 @@
-package no.hyper.current.cloudinarysample;
+package no.hyper.current.cloudinarysample.scrollInScroll;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -6,6 +6,8 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+
+import no.hyper.current.cloudinarysample.R;
 
 /**
  * Created by xiangzhc on 02/06/16.

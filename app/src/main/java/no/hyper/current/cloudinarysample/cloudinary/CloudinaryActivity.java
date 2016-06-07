@@ -1,4 +1,4 @@
-package no.hyper.current.cloudinarysample;
+package no.hyper.current.cloudinarysample.cloudinary;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -20,6 +20,8 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
+
+import no.hyper.current.cloudinarysample.R;
 
 public class CloudinaryActivity extends AppCompatActivity {
     private static final String TAG = CloudinaryActivity.class.getSimpleName();

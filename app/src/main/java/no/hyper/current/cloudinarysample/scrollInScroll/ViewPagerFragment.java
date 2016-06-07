@@ -1,4 +1,4 @@
-package no.hyper.current.cloudinarysample;
+package no.hyper.current.cloudinarysample.scrollInScroll;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.Random;
+import no.hyper.current.cloudinarysample.R;
 
 /**
  * Created by xiangzhc on 06/06/16.

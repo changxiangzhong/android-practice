@@ -1,4 +1,4 @@
-package no.hyper.current.cloudinarysample;
+package no.hyper.current.cloudinarysample.scrollInScroll;
 
 import android.util.Log;
 import android.view.GestureDetector;
