@@ -42,27 +42,12 @@ public class CustomHorizontalScrollView extends HorizontalScrollView {
         return super.onTouchEvent(ev);
     }
 
-    public boolean canScroll(int dx) {
-        boolean ret;
-        int range = computeHorizontalScrollRange();
-        int offset = computeHorizontalScrollOffset();
-        int extent = computeHorizontalScrollExtent();
-
-        boolean rightEndReached = range == offset + extent;
-        boolean leftEndReached = offset == 0;
-
-        if (dx < 0 && rightEndReached) {
-            ret = false;
-        } else  if (dx > 0 && leftEndReached) {
-            ret = false;
-        } else {
-            ret = true;
+    @Override
+    protected void onOverScrolled(int scrollX, int scrollY, boolean clampedX, boolean clampedY) {
+        Log.v(getClass().getSimpleName(), "clampedX = " + clampedX);
+        super.onOverScrolled(scrollX, scrollY, clampedX, clampedY);
+        if (clampedX) {
+            getParent().requestDisallowInterceptTouchEvent(false);
         }
-
-        Log.v(getClass().getSimpleName(), "canScroll(), dx = " + dx + ", rightEndReached = " + rightEndReached +
-                ", leftEndReached = " + leftEndReached + ", canScroll = " + ret);
-
-        return ret;
     }
-
 }

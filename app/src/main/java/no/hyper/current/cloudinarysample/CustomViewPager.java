@@ -38,13 +38,4 @@ public class CustomViewPager extends ViewPager {
         return super.onTouchEvent(ev);
     }
 
-    @Override
-    protected boolean canScroll(View v, boolean checkV, int dx, int x, int y) {
-        if (v instanceof CustomHorizontalScrollView) {
-            CustomHorizontalScrollView hScrollView = (CustomHorizontalScrollView) v;
-            return hScrollView.canScroll(dx);
-        } else {
-            return super.canScroll(v, checkV, dx, x, y);
-        }
-    }
 }
